@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="img/29563.png">
+  <title>@Narllkx - Counter Strike 2 - config</title>
+  <style>
+ body {
+  background-color: #1a1a1a; /* Темно-серый фон */
+  color: #b2ff00; /* Яркий зеленый текст */
+  font-family: 'Arial', sans-serif; /* Шрифт Arial для основного текста */
+  padding: 20px;
+  margin: 0;
+}
+
+.btn {
+  border: 2px solid #b2ff00; /* Зеленая рамка */
+  color: #b2ff00;
+  background-color: transparent;
+  padding: 1rem 5rem;
+  font-size: 1.5rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #b2ff00; /* Зеленый фон при наведении */
+  color: #1a1a1a; /* Черный текст при наведении */
+}
+
+.text-monospace {
+  font-family: 'Courier New', Courier, monospace;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  padding: 1rem;
+  background-color: rgba(178, 255, 0, 0.1); /* Зеленоватый фон с прозрачностью */
+  border: 1px solid #b2ff00; /* Зеленая рамка */
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+.position-relative {
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .btn {
+    font-size: 0.8rem;
+  }
+}
+.copy {
+      margin-bottom: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="position-relative mb-3">
+    <button id="first-button" class="position-absolute btn btn-sm btn-primary copy" style="right: 0" onclick="copyText('first');" title="Copy Text">
+      Copy
+    </button>
+    <div id="first" class="text-monospace">
+// Reset all binds
+unbindall
+
+// Mouse sensitivity settings
+sensitivity "0.7"
+zoom_sensitivity_ratio "0.7"
+
+// Viewmodel and HUD settings
+viewmodel_fov "68.000000"
+viewmodel_offset_x "2.500000"
+viewmodel_offset_y "2.000000"
+viewmodel_offset_z "-2.000000"
+cl_usenewbob false
+cl_hud_color "1"
+cl_teamcounter_playercount_instead_of_avatars "1"
+cl_allow_animated_avatars "0"
+cl_showloadout "1" 
+hud_showtargetid  "1"
+cl_radar_scale "0.501526"
+
+// Crosshair settings
+cl_crosshairalpha "255"
+cl_crosshaircolor "5"
+cl_crosshaircolor_r "50"
+cl_crosshaircolor_g "250"
+cl_crosshaircolor_b "50"
+cl_crosshairdot "0"
+cl_crosshairgap "-3"
+cl_crosshairsize "1.5"
+cl_crosshairstyle "4"
+cl_crosshairthickness "1"
+cl_fixedcrosshairgap "-3"
+cl_crosshair_outlinethickness "0"
+cl_crosshair_drawoutline "0"
+
+// Alias and bind for jumping
+alias "+alo" "+jump"
+alias "+allo" "-attack; -attack2"
+alias "+alllo" "-jump"
+
+// Weapon slots
+bind "1" "slot1"
+bind "2" "slot2"
+bind "3" "slot3"
+bind "4" "slot4"
+bind "5" "slot5"
+bind "6" "slot6"
+bind "8" "slot8"
+bind "9" "slot9"
+bind "x" "slot7"
+bind "v" "slot10"
+
+// Buy binds
+bind "f1" "buy deagle; buy vest"
+bind "f2" "buy flashbang; buy flashbang; buy smokegrenade; buy hegrenade"
+bind "f3" "autobuy"
+bind "f4" "buy awp; buy vest;"
+bind "f5" "buy smokegrenade"
+bind "f6" "buy flashbang"
+bind "f7" "buy hegrenade"
+bind "F8" "buy molotov; buy incgrenade;"
+
+// Mouse and keyboard bindings
+bind "mouse1" "+attack;"
+bind "mouse2" "+attack2;"
+bind "mouse3" "+alo; +allo; +alllo"
+bind "mouse4" "switchhands"
+bind "mouse5" "+voicerecord"
+bind "mwheelup" "+jump"
+bind "mwheeldown" "+jump"
+bind "space" "+jump"
+bind "a" "+left"
+bind "s" "+back"
+bind "d" "+right"
+bind "w" "+forward"
+bind "ctrl" "+duck"
+bind "shift" "+sprint"
+
+// Additional controls
+bind "k" "voice_modenable_toggle"
+bind "[" "toggle cl_crosshaircolor 1 2 3 4 5 0"
+bind "]" "toggle cl_hud_color 0 1 2 3 4 5 6 7 8 9 10 11 12"
+bind "`" "toggleconsole"
+bind "b" "buymenu"
+bind "c" "+voicerecord"
+bind "e" "+use"
+bind "escape" "cancelselect"
+bind "f" "+lookatweapon"
+bind "g" "drop"
+bind "m" "teammenu"
+bind "pause" "pause"
+bind "q" "lastinv"
+bind "r" "+reload"
+bind "t" "+spray_menu"
+bind "tab" "+scorenet"
+bind "u" "messagemode2"
+bind "y" "messagemode"
+bind "alt" "player_ping"
+bind "z" "radio1"
+
+// Crosshair adjustments
+bind "UPARROW" "incrementvar cl_crosshairsize 0 10 0.5"
+bind "DOWNARROW" "incrementvar cl_crosshairsize 0 10 -0.5"
+bind "LEFTARROW" "incrementvar cl_crosshairthickness 0 10 -0.5"
+bind "RIGHTARROW" "incrementvar cl_crosshairthickness 0 10 0.5"
+
+// Bomb handling
+alias "+bomb" "slot5"
+alias "-bomb" "drop; lastinv"
+bind "h" "+bomb"
+
+// Performance settings
+fps_max 0
+r_drawtracers_firstperson 0
+
+// Additional information
+clear
+echo +---------------------------------------------------------------+
+echo |                     Config by Narik                           |
+echo +---------------------------------------------------------------+
+echo
+echo Follow me on Instagram, VK, Steam: @Narllkx
+    </div>
+  </div>
+  <form action="/cfg/narik.cfg" target="_blank">
+    <button class="btn">Download</button>
+  </form>
+  <script>
+    function copyText(element) {
+      var $copyText = document.getElementById(element).innerText;
+      var button = document.getElementById(element + '-button');
+      navigator.clipboard.writeText($copyText).then(
+        function () {
+          var originalText = button.innerText;
+          button.innerText = 'Copied!';
+          setTimeout(function () {
+            button.innerText = originalText;
+          }, 750);
+        },
+        function () {
+          button.style.cssText = 'background-color: var(--red);';
+          button.innerText = 'Error';
+        }
+      );
+    }
+  </script>
+</body>
+</html>
