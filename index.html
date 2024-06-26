@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -62,8 +62,7 @@
     <button id="first-button" class="position-absolute btn btn-sm btn-primary copy" style="right: 0" onclick="copyText('first');" title="Copy Text">
       Copy
     </button>
-    <div id="first" class="text-monospace">
-// Reset all binds
+    <div id="first" class="text-monospace">// Reset all binds
 unbindall
 
 // Mouse sensitivity settings
@@ -75,7 +74,6 @@ viewmodel_fov "68.000000"
 viewmodel_offset_x "2.500000"
 viewmodel_offset_y "2.000000"
 viewmodel_offset_z "-2.000000"
-cl_usenewbob false
 cl_hud_color "1"
 cl_teamcounter_playercount_instead_of_avatars "1"
 cl_allow_animated_avatars "0"
@@ -134,12 +132,18 @@ bind "mouse5" "+voicerecord"
 bind "mwheelup" "+jump"
 bind "mwheeldown" "+jump"
 bind "space" "+jump"
+bind "ctrl" "+duck"
+bind "shift" "+sprint"
+bind "X_AXIS" "rightleft"	
+bind "Y_AXIS" "!forwardback"
+bind "MOUSE_X" "yaw"
+bind "MOUSE_Y" "pitch"
+bind "U_AXIS" "yaw"
+bind "R_AXIS" "pitch"
 bind "a" "+left"
 bind "s" "+back"
 bind "d" "+right"
 bind "w" "+forward"
-bind "ctrl" "+duck"
-bind "shift" "+sprint"
 
 // Additional controls
 bind "k" "voice_modenable_toggle"
@@ -161,6 +165,7 @@ bind "tab" "+scorenet"
 bind "u" "messagemode2"
 bind "y" "messagemode"
 bind "alt" "player_ping"
+bind "TAB" "+showscores"
 bind "z" "radio1"
 
 // Crosshair adjustments
@@ -176,7 +181,28 @@ bind "h" "+bomb"
 
 // Performance settings
 fps_max 0
+fps_max_tools 0
+fps_max_ui 0
+mobile_fps_limit 0
+engine_low_latency_sleep_after_client_tick 0
+cl_allow_animated_avatars 0
+voice_threshold_attack 0
+voice_always_sample_mic 1
+violence_ablood 0
+violence_agibs 0
+violence_hblood 0
+violence_hgibs 0
 r_drawtracers_firstperson 0
+cl_cq_min_queue 0
+cl_net_buffer_ticks 0
+cq_buffer_bloat_msecs_max 16
+cq_enable 1
+cq_min_queue_size 0
+sv_clockcorrection_msecs 15
+sv_maxunlag 1
+sv_merge_changes_after_tick_with_calcdelta 1
+rate 786432
+
 
 // Additional information
 clear
