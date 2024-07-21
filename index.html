@@ -62,10 +62,7 @@
     <button id="first-button" class="position-absolute btn btn-sm btn-primary copy" style="right: 0" onclick="copyText('first');" title="Copy Text">
       Copy
     </button>
-    <div id="first" class="text-monospace">// Reset all binds
-unbindall
-
-// Mouse sensitivity settings
+    <div id="first" class="text-monospace">// Mouse sensitivity settings
 sensitivity "0.7"
 zoom_sensitivity_ratio "0.7"
 
@@ -197,12 +194,34 @@ cl_cq_min_queue 0
 cl_net_buffer_ticks 0
 cq_buffer_bloat_msecs_max 16
 cq_enable 1
-cq_min_queue_size 0
 sv_clockcorrection_msecs 15
 sv_maxunlag 1
 sv_merge_changes_after_tick_with_calcdelta 1
 rate 786432
+voice_always_sample_mic "1";
+cl_interp "0";
+r_drawtracers "1";
+hud_showtargetid "1";
+hud_scaling "1";
+cl_autohelp "0";
+cl_showfps "0";
+r_show_build_info "0";
+m_yaw "0.022000";
 
+//Звук
+volume "0.130000";
+snd_deathcamera_volume "0";
+snd_headphone_eq "0";
+snd_mapobjective_volume "0";
+snd_menumusic_volume "0";
+snd_mute_losefocus "1";
+snd_mvp_volume "0.16";
+snd_roundaction_volume "0";
+snd_roundend_volume "0";
+snd_roundstart_volume "0";
+snd_spatialize_lerp "0";
+snd_steamaudio_enable_perspective_correction "1";
+snd_tensecondwarning_volume "0.158710";
 
 // Additional information
 clear
